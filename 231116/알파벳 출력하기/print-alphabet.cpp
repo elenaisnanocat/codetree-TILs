@@ -11,7 +11,7 @@ int main() {
         for(int j = 0; j <= i; j++) {
             cout << c;
             c++;
-            if(c == 'Z') c = 'A';
+            if(c > 'Z') c = 'A';
         }
         cout << "\n";
     }
