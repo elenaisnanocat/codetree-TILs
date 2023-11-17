@@ -10,7 +10,7 @@ int main() {
     for(int cur = s; cur <= e; cur++) {
         int div_cnt = 0;
         
-        for(int div = 1; div <= cur - 1; div++) {
+        for(int div = 1; div <= cur; div++) {
             if(cur % div == 0) {
                 div_cnt++;
             }
