@@ -12,8 +12,8 @@ int main() {
         cin >> arr[i];
     }
 
-    for(int i = 0; i <= n; i++) {
-        if(arr[n - i] % 2 == 0 && arr[n - i] != 0) cout << arr[n - i] << " ";
+    for(int i = n - 1; i >= 0; i--) {
+        if(arr[i] % 2 == 0 && arr[i] != 0) cout << arr[i] << " ";
     }
     return 0;
 }
