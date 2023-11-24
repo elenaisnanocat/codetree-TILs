@@ -20,7 +20,7 @@ int main() {
                 break;
             }
 
-            if(arr1[i + j != arr2[j]]) {
+            if(arr1[i + j] != arr2[j]) {
                 check = false;
                 break;
             }
