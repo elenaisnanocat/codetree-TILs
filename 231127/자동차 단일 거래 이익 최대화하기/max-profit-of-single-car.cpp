@@ -1,37 +1,26 @@
 #include <iostream>
 
+#define MAX_NUM 1000
+
 using namespace std;
 
 int main() {
-    int n, arr[1001] = {};
+    int n;
+    int price[MAX_NUM];
+
     cin >> n;
+    for(int i = 0; i < n; i++) cin >> price[i];
 
-    for(int i = 0; i < n; i++)
-        cin >> arr[i];
-    
-    int buy = arr[0], idx = 0;
-
+    int max_profit = 0;
     for(int i = 0; i < n; i++) {
-        if(buy > arr[i]) {
-            buy = arr[i];
-            idx = i;
+        for(int j = i + 1; j < n; j++){
+            int profit = price[j] - price[i];
+
+            if(profit > max_profit)
+                max_profit = profit;
         }
     }
-    //cout << buy;
-    
-    //판매
-    int max_price = arr[idx];
-    
-    if((idx + 1) == n) {
-        cout << 0;
-    }
-    else{
-        for(int sale = idx; sale < n; sale++) {
-            if(arr[sale] > max_price) {
-                max_price = arr[sale];
-            }
-        }
-        cout << max_price - buy;
-    }
+    cout << max_profit;
+
     return 0;
 }
