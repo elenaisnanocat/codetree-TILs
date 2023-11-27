@@ -31,7 +31,7 @@ int main() {
                 max_price = arr[sale];
             }
         }
+        cout << max_price - buy;
     }
-    cout << max_price - buy;
     return 0;
 }
