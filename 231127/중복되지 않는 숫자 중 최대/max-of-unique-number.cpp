@@ -11,7 +11,7 @@ int main() {
         cin >> arr[i];
         cnt_arr[arr[i]]++;
     }
-    for(int i = 0; i < n; i++) {
+    for(int i = 0; i <= n; i++) {
         if(cnt_arr[i] == 1) {
             if(i > max_v) {
                 max_v = i;
