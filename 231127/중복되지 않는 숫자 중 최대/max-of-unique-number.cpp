@@ -16,9 +16,14 @@ int main() {
             if(i > max_v) {
                 max_v = i;
             }
-        } 
+        }
     }
-    cout << max_v;
+    if(max_v != INT_MIN) {
+        cout << max_v;
+    }
+    else {
+        cout << -1;
+    }
 
     return 0;
 }
