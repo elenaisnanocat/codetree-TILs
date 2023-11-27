@@ -1,29 +1,24 @@
 #include <iostream>
-#include <climits>
 
 using namespace std;
 
 int main() {
-    int n, arr[1000] = {}, cnt_arr[1000] = {}, max_v = INT_MIN;
+    int n, arr[1000] = {}, cnt_arr[1001] = {}, max_v = -1;
     cin >> n;
 
-    for(int i = 0; i <= n; i++) {
+    for(int i = 0; i < n; i++) {
         cin >> arr[i];
-        cnt_arr[arr[i]]++;
     }
-    for(int i = 0; i <= n; i++) {
-        if(cnt_arr[i] == 1) {
-            if(i > max_v) {
-                max_v = i;
-            }
+
+    for(int i = 0; i < n; i++) cnt_arr[arr[i]]++;
+
+    for(int j = 1000; j >= 0; j--) {
+        if(cnt_arr[j] == 1) {
+            max_v = j;
+            break;
         }
     }
-    if(max_v != INT_MIN) {
-        cout << max_v;
-    }
-    else {
-        cout << -1;
-    }
+    cout << max_v;
 
     return 0;
 }
