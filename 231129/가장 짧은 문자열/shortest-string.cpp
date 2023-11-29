@@ -15,7 +15,7 @@ int main() {
     arr[1] = ss2;
     arr[2] = ss3;
 
-    sort(arr, arr+2);
+    sort(arr, arr+3);
     cout << arr[2] - arr[0];
     
 
