@@ -11,7 +11,7 @@ int main() {
     if(c != 'z') {
         ans = (int)c + 1;
     }
-    else ans = (int)c - (int)'a' - 1;
+    else ans = 'a';
 
     cout << ans;
     return 0;
