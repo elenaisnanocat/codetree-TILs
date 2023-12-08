@@ -15,8 +15,8 @@ int main() {
         cnt++;
     }
     
-    if(cnt) cout << cnt;
-    else cout << -1;
+    if(cnt == a.size()) cnt = -1;
+    cout << cnt;
 
     return 0;
 }
