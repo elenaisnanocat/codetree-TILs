@@ -22,7 +22,8 @@ bool IsSubsequence() {
 
 
 int main() {
-
+    cin >> n >> m;
+    
     for(int i = 0; i <= n; i++){
         cin >> arra[i];
     }
