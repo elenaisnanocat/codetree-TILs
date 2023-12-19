@@ -7,10 +7,10 @@ int n, m;
 int arra[100], arrb[100];
 
 bool IsSame(int n) {
-    for(int i = 0; i < m; i++) {
+    for(int i = 0; i < m; i++) 
         if(arra[i + n] != arrb[i])
             return false;
-    } return true;
+    return true;
 }
 
 bool IsSubsequence() {
