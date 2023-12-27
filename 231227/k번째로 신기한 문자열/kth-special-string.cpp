@@ -7,25 +7,27 @@ using namespace std;
 int n, k, cnt;
 string t, str, arr[100];
 
+bool CanArray(string a, string b) {
+    if((int)a.size() < (int)b.size()) return false;
+
+    return true;
+}
+
 int main() {
     cin >> n >> k >> t;
 
     for(int i = 0; i < n; i++) {
         cin >> str;
-        if(str.substr(0, t.size()) == t) {
-            arr[i] = str;
-            cnt++;
+
+
+        if(CanArray(str, t) && str.substr(0, t.size()) == t) {
+            arr[cnt++] = str;
         }
     }
     
     sort(arr, arr + cnt);
 
-     for(int i = 0; i <= cnt; i++) {
-        cin >> arr[i];
-        //cout << arr[i];
-        if(i == k - 1) cout << arr[i];
-    }
-
+    cout << arr[k - 1];
     
     return 0;
 }
