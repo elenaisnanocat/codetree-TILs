@@ -41,12 +41,18 @@ int main() {
     sort(persons, persons + 5, cmpname);
     cout << "name" << "\n";
     for(int i = 0; i < 5; i++) {
-        cout << persons[i].na << " " << persons[i].h << " " << persons[i].w << "\n";
+        cout << persons[i].na << " " << persons[i].h << " "; 
+        cout << fixed;
+        cout.precision(1);
+        cout << persons[i].w << "\n";
     }
     cout << "\n" << "height" << "\n";
     sort(persons, persons + 5, cmph);
      for(int i = 0; i < 5; i++) {
-        cout << persons[i].na << " " << persons[i].h << " " << persons[i].w << "\n";
+        cout << persons[i].na << " " << persons[i].h << " "; 
+        cout << fixed;
+        cout.precision(1);
+        cout << persons[i].w << "\n";
     }
 
     return 0;
