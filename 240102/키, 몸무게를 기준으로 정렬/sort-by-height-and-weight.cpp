@@ -37,7 +37,7 @@ int main() {
 
     sort(persons, persons + n, cmp);
     for(int j = 0; j < n; j++) {
-        cout << persons[j].na;
+        cout << persons[j].na << " " << persons[j].h << " " << persons[j].w << "\n" ;
     }
 
     return 0;
