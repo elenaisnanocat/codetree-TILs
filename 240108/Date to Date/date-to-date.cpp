@@ -30,6 +30,9 @@ int main() {
         }
         later += d2;
     }
-    cout << later - first;
+    
+    if(first == later) cout << 1;
+    else cout << later - first;
+    
     return 0;
 }
