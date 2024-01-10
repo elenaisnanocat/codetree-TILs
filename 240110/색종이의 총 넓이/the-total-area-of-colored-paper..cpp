@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int n, x, y;
+int n, x, y, xx, yy;
 int arr[MAX_R + 1][MAX_R + 1];
 
 int main() {
@@ -14,9 +14,11 @@ int main() {
         cin >> x >> y;
         x += OFFSET;
         y += OFFSET;
+        xx = x + 8;
+        yy = y + 8;
 
-        for(int j = x - 8; j < x; j++) {
-            for(int k = y; k < y + 8; k++) {
+        for(int j = x; j < xx; j++) {
+            for(int k = y; k < yy; k++) {
                 arr[j][k] = 1;
             }
         }
