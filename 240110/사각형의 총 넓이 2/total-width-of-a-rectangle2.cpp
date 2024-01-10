@@ -12,6 +12,11 @@ int main() {
     cin >> n;
     for(int i = 0; i < n; i++) {
         cin >> x >> y >> xx >> yy;
+        x += OFFSET;
+        y += OFFSET;
+        xx += OFFSET;
+        yy += OFFSET;
+
         for(int j = x; j < xx; j++) {
             for(int k = y; k < yy; k++) {
                 arr[j][k] = 1;
