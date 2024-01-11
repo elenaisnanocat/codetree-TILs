@@ -14,6 +14,11 @@ int main() {
         //1번 사각형 idx 0, 2번 사각형 idx 1
         cin >> x1[i] >> y1[i] >> x2[i] >> y2[i];
 
+        x1[i] += OFFSET;
+        y1[i] += OFFSET;
+        x2[i] += OFFSET;
+        y2[i] += OFFSET;
+
         for(int x = x1[i]; x < x2[i]; x++) {
             for(int y = y1[i]; y < y2[i]; y++) {
                 // 1번 사각형 1 2번 사각형 2
@@ -43,6 +48,6 @@ int main() {
     else ans = 0;
 
     cout << ans;
-    
+
     return 0;
 }
