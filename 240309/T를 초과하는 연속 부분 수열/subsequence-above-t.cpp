@@ -19,6 +19,9 @@ int main() {
         else cnt = 1;
         ans = max(cnt, ans);
     }
+    if(ans == 1) {
+        ans = 0;
+    }
     cout << ans;
     return 0;
 }
