@@ -15,7 +15,7 @@ int main() {
     }
     int cnt = 0, ans = 0;
     for(int i = 0; i < n; i++) {
-        if(i >= 1 && arr[i] > arr[i - 1] && arr[i] > t) cnt++;
+        if(i >= 1 && arr[i] > t) cnt++;
         else cnt = 0;
 
         ans = max(cnt, ans);
