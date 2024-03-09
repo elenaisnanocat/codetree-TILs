@@ -5,20 +5,20 @@
 
 using namespace std;
 
-int n, t, cnt = 0, ans = 0;
+int n, t;
 int arr[MAX_N];
 
 int main() {
     cin >> n >> t;
     for(int i = 0; i < n; i++) {
         cin >> arr[i];
-        if(i >= 1 && arr[i] > arr[i - 1] && arr[i] > t){
-        cnt++;
-        ans = max(cnt, ans);
-        }
-        else cnt = 0;
     }
-
+    int cnt = 0, ans = 0;
+    for(int i = 0; i < n; i++) {
+        if(i >= 1 && arr[i] > arr[i - 1] && arr[i - 1] > t) cnt++;
+        else cnt = 1;
+        ans = max(cnt, ans);
+    }
     cout << ans;
     return 0;
 }
