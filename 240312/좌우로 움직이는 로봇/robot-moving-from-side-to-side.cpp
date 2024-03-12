@@ -30,28 +30,30 @@ int main() {
         cin >> t >> d;
         while(t--) {
             if(d == 'R') {
-                pos_b[time_b] = pos_b[time_b] + 1;
+                pos_b[time_b] = pos_b[time_b - 1] + 1;
             }
-            else pos_b[time_b] = pos_b[time_b] - 1;
+            else pos_b[time_b] = pos_b[time_b - 1] - 1;
             time_b++;
         }
     }
-    
-    int ans = 0;
-    if(time_a >= time_b) {
-
-        for(int i = 1; i <= time_a; i++) {
-            if((pos_a[i - 1] != pos_b[i - 1]) && (pos_a[i] == pos_b[i])) {
-                ans++;
-            }
+    //먼저 끝난 로봇 위치 처리
+    if(time_a < time_b) {
+        for(int i = time_a; i < time_b; i++) {
+            pos_a[i] = pos_a[i - 1];
         }
     }
-    else {
-        for(int i = 1; i <= time_b; i++) {
-            if((pos_a[i - 1] != pos_b[i - 1]) && (pos_a[i] == pos_b[i])) {
-                ans++;
-            }
+    else if(time_a > time_b) {
+        for(int i = time_b; i < time_a; i++) {
+            pos_b[i] = pos_b[i - 1];
         }
+    }
+    
+    int ans = 0, tmax = 0;
+    if(time_a > time_b) tmax = time_a;
+    else tmax = time_b;
+
+    for(int i = 1; i < tmax; i++) {
+        if(pos_a[i] == pos_b[i] && pos_a[i - 1] != pos_b[i - 1]) ans++;
     }
     cout << ans;
 
