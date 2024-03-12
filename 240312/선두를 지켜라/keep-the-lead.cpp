@@ -1,6 +1,6 @@
 #include <iostream>
 
-#define MAX_T 100000
+#define MAX_T 1000000
 
 using namespace std;
 
