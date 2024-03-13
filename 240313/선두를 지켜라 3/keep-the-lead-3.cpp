@@ -32,15 +32,15 @@ int main() {
     int ans = 0, leader = 0;
     for(int cur = 1; cur < time_a; cur++) {
         if(pos_a[cur] > pos_b[cur]) {
-            if(leader == 2 || leader == 3) ans++;
+            if(leader != 1) ans++;
             leader = 1;
         }
         else if(pos_a[cur] < pos_b[cur]) {
-            if(leader == 1 || leader == 3) ans++;
+            if(leader != 2) ans++;
             leader = 2;
         }
-        else if(pos_a[cur] == pos_b[cur]) {
-            if(leader == 1 || leader == 2) ans++;
+        else {
+            if(leader != 3) ans++;
             leader = 3;
         }
     }    
