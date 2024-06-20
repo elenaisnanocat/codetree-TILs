@@ -14,7 +14,7 @@ int dc[MAX_NUM] = {1, 0, -1, 0};
 int r, c, dir;
 
 bool InRange(int r, int c) {
-    return 0 <= r && r < n && 0 <= c && c < n;
+    return 0 <= r && r < n && 0 <= c && c < m;
 }
 
 int main() {
