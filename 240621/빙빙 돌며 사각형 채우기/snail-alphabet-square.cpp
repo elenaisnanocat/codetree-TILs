@@ -14,7 +14,7 @@ int dr[DIR_NUM] = {0, 1, 0, -1};
 int dc[DIR_NUM] = {1, 0, -1, 0};
 
 bool InRange(int r, int c) {
-    return 0 <= r && r < n && 0 <= c && c < n;
+    return 0 <= r && r < n && 0 <= c && c < m;
 }
 
 int main() {
