@@ -25,7 +25,7 @@ int main() {
             char nr = r + dr[dir];
             char nc = c + dc[dir];
 
-            if(InRange(nr, nc) && arr[nr][nc] == 0) {
+            if(InRange(nr, nc) && arr[nr][nc] == '\0') {
                 r = nr;
                 c = nc;
                 arr[r][c] =+ (char)(num % 26 + 'A');
